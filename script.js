@@ -1,5 +1,102 @@
-// Smooth scrolling for anchor links
+// Language management
+let currentLang = 'en';
+
+function switchLanguage(lang) {
+    currentLang = lang;
+    
+    // Update HTML dir attribute
+    document.documentElement.setAttribute('dir', lang === 'he' ? 'rtl' : 'ltr');
+    document.documentElement.setAttribute('lang', lang);
+    
+    // Update all elements with data-lang attributes
+    const elements = document.querySelectorAll('[data-lang-en], [data-lang-he]');
+    elements.forEach(element => {
+        const text = element.getAttribute(`data-lang-${lang}`);
+        if (text) {
+            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                // Handle placeholders
+                if (element.hasAttribute('data-placeholder-en') || element.hasAttribute('data-placeholder-he')) {
+                    element.placeholder = element.getAttribute(`data-placeholder-${lang}`) || '';
+                }
+            } else if (element.tagName === 'OPTION') {
+                // Handle option text
+                element.textContent = text;
+            } else {
+                // Handle regular text content
+                element.textContent = text;
+            }
+        }
+    });
+    
+    // Update labels - preserve required asterisk
+    const labels = document.querySelectorAll('label[data-lang-en], label[data-lang-he]');
+    labels.forEach(label => {
+        const labelText = label.getAttribute(`data-lang-${lang}`);
+        if (labelText) {
+            const requiredSpan = label.querySelector('.required');
+            if (requiredSpan) {
+                label.innerHTML = labelText + ' ' + requiredSpan.outerHTML;
+            } else {
+                label.textContent = labelText;
+            }
+        }
+    });
+    
+    // Update select options
+    const selects = document.querySelectorAll('select');
+    selects.forEach(select => {
+        const options = select.querySelectorAll('option[data-lang-en], option[data-lang-he]');
+        options.forEach(option => {
+            const text = option.getAttribute(`data-lang-${lang}`);
+            if (text) {
+                option.textContent = text;
+            }
+        });
+    });
+    
+    // Update textarea placeholders
+    const textareas = document.querySelectorAll('textarea[data-placeholder-en], textarea[data-placeholder-he]');
+    textareas.forEach(textarea => {
+        const placeholder = textarea.getAttribute(`data-placeholder-${lang}`);
+        if (placeholder) {
+            textarea.placeholder = placeholder;
+        }
+    });
+    
+    // Update active language button
+    const langButtons = document.querySelectorAll('.lang-btn');
+    langButtons.forEach(btn => {
+        if (btn.getAttribute('data-lang') === lang) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+        }
+    });
+    
+    // Store preference
+    localStorage.setItem('preferredLanguage', lang);
+}
+
+// Initialize language from localStorage or default to English
 document.addEventListener('DOMContentLoaded', function() {
+    const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+    switchLanguage(savedLang);
+    
+    // Initialize textarea placeholder
+    const textarea = document.getElementById('asthma-info');
+    if (textarea) {
+        textarea.placeholder = textarea.getAttribute(`data-placeholder-${savedLang}`) || '';
+    }
+    
+    // Language toggle buttons
+    const langButtons = document.querySelectorAll('.lang-btn');
+    langButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const lang = this.getAttribute('data-lang');
+            switchLanguage(lang);
+        });
+    });
+    
     // Handle smooth scrolling for all anchor links
     const anchorLinks = document.querySelectorAll('a[href^="#"]');
     
@@ -78,6 +175,12 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Reset form
             betaForm.reset();
+            
+            // Update form placeholders after reset
+            const textarea = document.getElementById('asthma-info');
+            if (textarea) {
+                textarea.placeholder = textarea.getAttribute(`data-placeholder-${currentLang}`) || '';
+            }
             
             // Hide success message after 10 seconds (optional)
             setTimeout(function() {

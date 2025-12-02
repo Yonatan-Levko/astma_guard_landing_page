@@ -26,6 +26,19 @@ body {
     background-color: var(--bg-white);
 }
 
+/* RTL Support */
+html[dir="rtl"] {
+    direction: rtl;
+}
+
+html[dir="rtl"] body {
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+
+html[dir="ltr"] {
+    direction: ltr;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -84,6 +97,40 @@ body {
 
 .nav-cta:hover {
     background-color: var(--primary-dark);
+}
+
+.language-toggle {
+    display: flex;
+    gap: 0.5rem;
+    margin-left: 1rem;
+}
+
+.lang-btn {
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--border-color);
+    background-color: var(--bg-white);
+    color: var(--text-dark);
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.875rem;
+}
+
+.lang-btn:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.lang-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+html[dir="rtl"] .language-toggle {
+    margin-left: 0;
+    margin-right: 1rem;
 }
 
 .mobile-menu-toggle {
@@ -551,6 +598,39 @@ footer {
     color: var(--secondary-color);
 }
 
+/* RTL-specific adjustments */
+html[dir="rtl"] .hero-content {
+    direction: rtl;
+}
+
+html[dir="rtl"] .hero-cta {
+    direction: rtl;
+}
+
+html[dir="rtl"] .watch-mockup {
+    right: auto;
+    left: 10%;
+}
+
+html[dir="rtl"] .phone-mockup {
+    left: auto;
+    right: 10%;
+}
+
+html[dir="rtl"] .form-group label {
+    text-align: right;
+}
+
+html[dir="rtl"] .form-group input,
+html[dir="rtl"] .form-group select,
+html[dir="rtl"] .form-group textarea {
+    text-align: right;
+}
+
+html[dir="rtl"] .form-group textarea {
+    direction: rtl;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-links {
@@ -570,8 +650,29 @@ footer {
         display: flex;
     }
 
+    .language-toggle {
+        margin-left: 0;
+        margin-right: 0;
+        order: -1;
+    }
+
+    html[dir="rtl"] .language-toggle {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .nav-container {
+        flex-wrap: wrap;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+    }
+
     .mobile-menu-toggle {
         display: flex;
+        order: 2;
     }
 
     .hero-content {

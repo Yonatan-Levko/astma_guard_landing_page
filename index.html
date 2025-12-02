@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AsthmaSense - AI-powered assistant that helps predict and track asthma attacks using smartwatch data. Join our early access beta.">
-    <title>AsthmaSense – Predict asthma flare-ups before they hit</title>
+    <meta name="description" content="asthmaGuard - AI-powered assistant that helps predict and track asthma attacks using smartwatch data. Join our early access beta.">
+    <title>asthmaGuard – Predict asthma flare-ups before they hit</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,13 +15,17 @@
     <header>
         <nav class="navbar">
             <div class="nav-container">
-                <div class="logo">AsthmaSense</div>
+                <div class="logo">asthmaGuard</div>
                 <ul class="nav-links">
-                    <li><a href="#how-it-works">How it works</a></li>
-                    <li><a href="#for-whom">For whom?</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                    <li><a href="#beta" class="nav-cta">Join beta</a></li>
+                    <li><a href="#how-it-works" data-lang-en="How it works" data-lang-he="איך זה עובד">How it works</a></li>
+                    <li><a href="#for-whom" data-lang-en="For whom?" data-lang-he="למי זה מיועד?">For whom?</a></li>
+                    <li><a href="#faq" data-lang-en="FAQ" data-lang-he="שאלות נפוצות">FAQ</a></li>
+                    <li><a href="#beta" class="nav-cta" data-lang-en="Join beta" data-lang-he="הצטרף לבטא">Join beta</a></li>
                 </ul>
+                <div class="language-toggle">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="he">HE</button>
+                </div>
                 <button class="mobile-menu-toggle" aria-label="Toggle menu">
                     <span></span>
                     <span></span>
@@ -37,11 +41,11 @@
             <div class="container">
                 <div class="hero-content">
                     <div class="hero-text">
-                        <h1>Predict asthma flare-ups before they hit.</h1>
-                        <p class="hero-subtitle">AsthmaSense uses AI and your smartwatch data to help you understand your asthma patterns, predict potential attacks, and feel more in control of your health.</p>
+                        <h1 data-lang-en="Predict asthma flare-ups before they hit." data-lang-he="חזו התקפי אסתמה לפני שהם מגיעים.">Predict asthma flare-ups before they hit.</h1>
+                        <p class="hero-subtitle" data-lang-en="asthmaGuard uses AI models and insights from the latest research in respiratory health to help detect early signs of elevated risk. Works with all smartwatches (Apple Watch, Garmin, Fitbit, Samsung, WearOS) and smartphones on both iPhone and Android." data-lang-he="asthmaGuard משתמש במודלי בינה מלאכותית וממצאים מתוך מחקרים עדכניים בתחום הבריאות הנשימתית כדי לזהות סימנים מוקדמים לסיכון מוגבר. עובד עם כל השעונים החכמים (Apple Watch, Garmin, Fitbit, Samsung, WearOS) וסמארטפונים על iPhone ו-Android.">asthmaGuard uses AI models and insights from the latest research in respiratory health to help detect early signs of elevated risk. Works with all smartwatches (Apple Watch, Garmin, Fitbit, Samsung, WearOS) and smartphones on both iPhone and Android.</p>
                         <div class="hero-cta">
-                            <a href="#beta" class="btn btn-primary">Join the early access list</a>
-                            <a href="#how-it-works" class="btn btn-secondary">Learn more</a>
+                            <a href="#beta" class="btn btn-primary" data-lang-en="Join the early access list" data-lang-he="הצטרף לרשימת הגישה המוקדמת">Join the early access list</a>
+                            <a href="#how-it-works" class="btn btn-secondary" data-lang-en="Learn more" data-lang-he="למד עוד">Learn more</a>
                         </div>
                     </div>
                     <div class="hero-visual">
@@ -57,23 +61,23 @@
         <!-- Problem Section -->
         <section class="problem" id="problem">
             <div class="container">
-                <h2>Living with asthma is unpredictable.</h2>
+                <h2 data-lang-en="Living with asthma is unpredictable." data-lang-he="חיים עם אסתמה הם בלתי צפויים.">Living with asthma is unpredictable.</h2>
                 <div class="problem-list">
                     <div class="problem-item">
                         <div class="problem-icon">⚠️</div>
-                        <p>Not knowing when an attack might come, leaving you anxious about daily activities.</p>
+                        <p data-lang-en="Not knowing when an attack might come, leaving you anxious about daily activities." data-lang-he="אי ידיעה מתי התקף עלול להגיע, מה שמשאיר אותך חרד מפעילויות יומיומיות.">Not knowing when an attack might come, leaving you anxious about daily activities.</p>
                     </div>
                     <div class="problem-item">
                         <div class="problem-icon">🏃</div>
-                        <p>Fear of exercising or engaging in activities that might trigger symptoms.</p>
+                        <p data-lang-en="Fear of exercising or engaging in activities that might trigger symptoms." data-lang-he="פחד מפעילות גופנית או פעילויות שעלולות לעורר תסמינים.">Fear of exercising or engaging in activities that might trigger symptoms.</p>
                     </div>
                     <div class="problem-item">
                         <div class="problem-icon">📊</div>
-                        <p>Lack of continuous monitoring between doctor visits, making it hard to identify patterns.</p>
+                        <p data-lang-en="Lack of continuous monitoring between doctor visits, making it hard to identify patterns." data-lang-he="חוסר ניטור רציף בין ביקורי רופא, מה שמקשה על זיהוי דפוסים.">Lack of continuous monitoring between doctor visits, making it hard to identify patterns.</p>
                     </div>
                     <div class="problem-item">
                         <div class="problem-icon">💔</div>
-                        <p>The emotional burden on patients and families, always wondering "what if?"</p>
+                        <p data-lang-en="The emotional burden on patients and families, always wondering &quot;what if?&quot;" data-lang-he="הנטל הרגשי על חולים ומשפחות, תמיד תוהים &quot;מה אם?&quot;">The emotional burden on patients and families, always wondering "what if?"</p>
                     </div>
                 </div>
             </div>
@@ -82,22 +86,22 @@
         <!-- Solution / How it works -->
         <section class="solution" id="how-it-works">
             <div class="container">
-                <h2>How AsthmaSense works</h2>
+                <h2 data-lang-en="How asthmaGuard works" data-lang-he="איך asthmaGuard עובד">How asthmaGuard works</h2>
                 <div class="steps">
                     <div class="step">
                         <div class="step-number">1</div>
-                        <h3>Connect your smartwatch</h3>
-                        <p>Link your Apple Watch, Garmin, or other compatible device and allow access to health data like heart rate, activity levels, and sleep patterns.</p>
+                        <h3 data-lang-en="Connect your smartwatch or smartphone" data-lang-he="חבר את השעון החכם או הסמארטפון שלך">Connect your smartwatch or smartphone</h3>
+                        <p data-lang-en="Link your Apple Watch, Garmin, Fitbit, Samsung, WearOS device, or smartphone and allow access to health data like heart rate, activity levels, and sleep patterns. Works on both iPhone and Android." data-lang-he="חבר את ה-Apple Watch, Garmin, Fitbit, Samsung, WearOS או הסמארטפון שלך והרשה גישה לנתוני בריאות כמו דופק, רמות פעילות ודפוסי שינה. עובד גם על iPhone וגם על Android.">Link your Apple Watch, Garmin, Fitbit, Samsung, WearOS device, or smartphone and allow access to health data like heart rate, activity levels, and sleep patterns. Works on both iPhone and Android.</p>
                     </div>
                     <div class="step">
                         <div class="step-number">2</div>
-                        <h3>Log your symptoms</h3>
-                        <p>Record asthma symptoms and attacks in the app whenever they occur. This helps build your personal health profile.</p>
+                        <h3 data-lang-en="Log your symptoms" data-lang-he="רשום את התסמינים שלך">Log your symptoms</h3>
+                        <p data-lang-en="Record asthma symptoms and attacks in the app whenever they occur. This helps build your personal health profile." data-lang-he="רשום תסמיני אסתמה והתקפים באפליקציה בכל פעם שהם מתרחשים. זה עוזר לבנות את פרופיל הבריאות האישי שלך.">Record asthma symptoms and attacks in the app whenever they occur. This helps build your personal health profile.</p>
                     </div>
                     <div class="step">
                         <div class="step-number">3</div>
-                        <h3>Get AI-powered insights</h3>
-                        <p>Our AI learns your unique patterns and alerts you when risk levels rise, giving you time to take preventive action.</p>
+                        <h3 data-lang-en="Get AI-powered insights" data-lang-he="קבל תובנות מבוססות בינה מלאכותית">Get AI-powered insights</h3>
+                        <p data-lang-en="Our AI models, combined with insights from the latest research in respiratory health, learn your unique patterns and alert you when risk levels rise, giving you time to take preventive action." data-lang-he="מודלי הבינה המלאכותית שלנו, בשילוב תובנות ממחקרים עדכניים בתחום הבריאות הנשימתית, לומדים את הדפוסים הייחודיים שלך ומתריעים כאשר רמות הסיכון עולות, מה שנותן לך זמן לנקוט בפעולה מונעת.">Our AI models, combined with insights from the latest research in respiratory health, learn your unique patterns and alert you when risk levels rise, giving you time to take preventive action.</p>
                     </div>
                 </div>
             </div>
@@ -106,27 +110,27 @@
         <!-- Who is it for? -->
         <section class="audience" id="for-whom">
             <div class="container">
-                <h2>Who is it for?</h2>
+                <h2 data-lang-en="Who is it for?" data-lang-he="למי זה מיועד?">Who is it for?</h2>
                 <div class="audience-cards">
                     <div class="audience-card">
                         <div class="card-icon">👤</div>
-                        <h3>Adults with asthma</h3>
-                        <p>People with moderate to severe asthma who want better insights into their condition and more control over their daily life.</p>
+                        <h3 data-lang-en="Adults with asthma" data-lang-he="מבוגרים עם אסתמה">Adults with asthma</h3>
+                        <p data-lang-en="People with moderate to severe asthma who want better insights into their condition and more control over their daily life." data-lang-he="אנשים עם אסתמה בינונית עד חמורה שמעוניינים בתובנות טובות יותר על מצבם ושליטה רבה יותר בחיי היומיום שלהם.">People with moderate to severe asthma who want better insights into their condition and more control over their daily life.</p>
                     </div>
                     <div class="audience-card">
                         <div class="card-icon">👨‍👩‍👧</div>
-                        <h3>Parents of children with asthma</h3>
-                        <p>Families looking for additional tools to monitor their child's asthma and provide peace of mind.</p>
+                        <h3 data-lang-en="Parents of children with asthma" data-lang-he="הורים לילדים עם אסתמה">Parents of children with asthma</h3>
+                        <p data-lang-en="Families looking for additional tools to monitor their child's asthma and provide peace of mind." data-lang-he="משפחות המחפשות כלים נוספים לניטור אסתמה של ילדיהם ולספק שקט נפשי.">Families looking for additional tools to monitor their child's asthma and provide peace of mind.</p>
                     </div>
                     <div class="audience-card">
                         <div class="card-icon">⌚</div>
-                        <h3>Smartwatch users</h3>
-                        <p>Anyone who already tracks their health with a smartwatch and wants to use that data to better manage their asthma.</p>
+                        <h3 data-lang-en="Smartwatch or smartphone users" data-lang-he="משתמשי שעונים חכמים או סמארטפונים">Smartwatch or smartphone users</h3>
+                        <p data-lang-en="Anyone who already tracks their health with a smartwatch or smartphone and wants to use that data to better manage their asthma." data-lang-he="כל מי שכבר עוקב אחר הבריאות שלו עם שעון חכם או סמארטפון ורוצה להשתמש בנתונים האלה כדי לנהל טוב יותר את האסתמה שלו.">Anyone who already tracks their health with a smartwatch or smartphone and wants to use that data to better manage their asthma.</p>
                     </div>
                     <div class="audience-card">
                         <div class="card-icon">💡</div>
-                        <h3>Health-conscious individuals</h3>
-                        <p>People willing to invest in a smartwatch if it means gaining valuable insights into their asthma patterns.</p>
+                        <h3 data-lang-en="Early beta testers" data-lang-he="בודקי בטא מוקדמים">Early beta testers</h3>
+                        <p data-lang-en="Anyone with asthma (or parents of children with asthma) who wants early access. No technical experience needed." data-lang-he="כל מי שסובל מאסתמה (או הורים לילדים עם אסתמה) שמעוניין בגישה מוקדמת. אין צורך בידע טכני.">Anyone with asthma (or parents of children with asthma) who wants early access. No technical experience needed.</p>
                     </div>
                 </div>
             </div>
@@ -135,27 +139,27 @@
         <!-- Benefits Section -->
         <section class="benefits">
             <div class="container">
-                <h2>What you can gain</h2>
+                <h2 data-lang-en="What you can gain" data-lang-he="מה תוכל להשיג">What you can gain</h2>
                 <div class="benefits-grid">
                     <div class="benefit-card">
                         <div class="benefit-icon">🛡️</div>
-                        <h3>More peace of mind</h3>
-                        <p>Feel safer in your daily life with early warnings and better understanding of your condition.</p>
+                        <h3 data-lang-en="More peace of mind" data-lang-he="יותר שקט נפשי">More peace of mind</h3>
+                        <p data-lang-en="Feel safer in your daily life with early warnings and better understanding of your condition." data-lang-he="הרגש בטוח יותר בחיי היומיום עם התראות מוקדמות והבנה טובה יותר של מצבך.">Feel safer in your daily life with early warnings and better understanding of your condition.</p>
                     </div>
                     <div class="benefit-card">
                         <div class="benefit-icon">🔍</div>
-                        <h3>Understand your triggers</h3>
-                        <p>Identify personal patterns and triggers that might not be obvious without continuous monitoring.</p>
+                        <h3 data-lang-en="Understand your triggers" data-lang-he="הבן את הטריגרים שלך">Understand your triggers</h3>
+                        <p data-lang-en="Identify personal patterns and triggers that might not be obvious without continuous monitoring." data-lang-he="זהה דפוסים וטריגרים אישיים שעלולים לא להיות ברורים ללא ניטור רציף.">Identify personal patterns and triggers that might not be obvious without continuous monitoring.</p>
                     </div>
                     <div class="benefit-card">
                         <div class="benefit-icon">👨‍⚕️</div>
-                        <h3>Better doctor visits</h3>
-                        <p>Share meaningful, data-driven insights with your healthcare provider for more informed discussions.</p>
+                        <h3 data-lang-en="Better doctor visits" data-lang-he="ביקורי רופא טובים יותר">Better doctor visits</h3>
+                        <p data-lang-en="Share meaningful, data-driven insights with your healthcare provider for more informed discussions." data-lang-he="שתף תובנות משמעותיות מבוססות נתונים עם ספק שירותי הבריאות שלך לדיונים מושכלים יותר.">Share meaningful, data-driven insights with your healthcare provider for more informed discussions.</p>
                     </div>
                     <div class="benefit-card">
                         <div class="benefit-icon">🏋️</div>
-                        <h3>Smarter activity decisions</h3>
-                        <p>Make informed choices about exercise and daily activities based on your current risk levels.</p>
+                        <h3 data-lang-en="Smarter activity decisions" data-lang-he="החלטות פעילות חכמות יותר">Smarter activity decisions</h3>
+                        <p data-lang-en="Make informed choices about exercise and daily activities based on your current risk levels." data-lang-he="קבל החלטות מושכלות על פעילות גופנית ופעילויות יומיומיות בהתבסס על רמות הסיכון הנוכחיות שלך.">Make informed choices about exercise and daily activities based on your current risk levels.</p>
                     </div>
                 </div>
             </div>
@@ -164,40 +168,42 @@
         <!-- Early Access / Beta Signup -->
         <section class="beta" id="beta">
             <div class="container">
-                <h2>Join the early access beta</h2>
-                <p class="beta-intro">We're building an experimental early version of AsthmaSense and looking for a small group of people to test it and provide feedback. Your input will help shape the future of this product.</p>
+                <h2 data-lang-en="Join the early access beta" data-lang-he="הצטרף לבטא הגישה המוקדמת">Join the early access beta</h2>
+                <p class="beta-intro" data-lang-en="We're building an experimental early version of asthmaGuard and looking for early beta testers to test it and provide feedback. Your input will help shape the future of this product." data-lang-he="אנחנו בונים גרסה ניסיונית מוקדמת של asthmaGuard ומחפשים בודקי בטא מוקדמים לבדוק אותה ולספק משוב. הקלט שלך יעזור לעצב את עתיד המוצר הזה.">We're building an experimental early version of asthmaGuard and looking for early beta testers to test it and provide feedback. Your input will help shape the future of this product.</p>
                 
                 <form id="beta-form" class="beta-form">
                     <div class="form-group">
-                        <label for="firstName">First name <span class="required">*</span></label>
+                        <label for="firstName" data-lang-en="First name" data-lang-he="שם פרטי">First name <span class="required">*</span></label>
                         <input type="text" id="firstName" name="firstName" required>
                     </div>
                     
                     <div class="form-group">
-                        <label for="email">Email <span class="required">*</span></label>
+                        <label for="email" data-lang-en="Email" data-lang-he="אימייל">Email <span class="required">*</span></label>
                         <input type="email" id="email" name="email" required>
                     </div>
                     
                     <div class="form-group">
-                        <label for="smartwatch">Do you currently use a smartwatch? <span class="required">*</span></label>
+                        <label for="smartwatch" data-lang-en="Do you currently use a smartwatch?" data-lang-he="האם אתה משתמש כרגע בשעון חכם?">Do you currently use a smartwatch? <span class="required">*</span></label>
                         <select id="smartwatch" name="smartwatch" required>
-                            <option value="">Select an option...</option>
-                            <option value="apple-watch">Yes – Apple Watch</option>
-                            <option value="other">Yes – other</option>
-                            <option value="willing">Not yet but willing</option>
-                            <option value="no">No</option>
+                            <option value="" data-lang-en="Select an option..." data-lang-he="בחר אפשרות...">Select an option...</option>
+                            <option value="apple-watch" data-lang-en="Apple Watch" data-lang-he="Apple Watch">Apple Watch</option>
+                            <option value="garmin" data-lang-en="Garmin" data-lang-he="Garmin">Garmin</option>
+                            <option value="fitbit" data-lang-en="Fitbit" data-lang-he="Fitbit">Fitbit</option>
+                            <option value="samsung" data-lang-en="Samsung" data-lang-he="Samsung">Samsung</option>
+                            <option value="wearos" data-lang-en="WearOS" data-lang-he="WearOS">WearOS</option>
+                            <option value="not-yet" data-lang-en="Not yet" data-lang-he="עדיין לא">Not yet</option>
                         </select>
                     </div>
                     
                     <div class="form-group">
-                        <label for="asthma-info">Anything you'd like to share about your asthma? (optional)</label>
-                        <textarea id="asthma-info" name="asthma-info" rows="4" placeholder="Tell us about your experience with asthma..."></textarea>
+                        <label for="asthma-info" data-lang-en="Anything you'd like to share about your asthma? (optional)" data-lang-he="יש משהו שתרצה לשתף על האסתמה שלך? (אופציונלי)">Anything you'd like to share about your asthma? (optional)</label>
+                        <textarea id="asthma-info" name="asthma-info" rows="4" data-placeholder-en="Tell us about your experience with asthma..." data-placeholder-he="ספר לנו על החוויה שלך עם אסתמה..."></textarea>
                     </div>
                     
-                    <button type="submit" class="btn btn-primary btn-submit">Submit</button>
+                    <button type="submit" class="btn btn-primary btn-submit" data-lang-en="Submit" data-lang-he="שלח">Submit</button>
                     
                     <div id="form-success" class="form-success" style="display: none;">
-                        <p>✅ Thank you! Your info has been captured in this demo. In a real deployment this would send your details to our backend or mailing list tool.</p>
+                        <p data-lang-en="✅ Thank you! Your info has been captured in this demo. In a real deployment this would send your details to our backend or mailing list tool." data-lang-he="✅ תודה! המידע שלך נשמר בהדגמה זו. בפריסה אמיתית זה היה שולח את הפרטים שלך לשרת האחורי או לכלי רשימת התפוצה שלנו.">✅ Thank you! Your info has been captured in this demo. In a real deployment this would send your details to our backend or mailing list tool.</p>
                     </div>
                 </form>
             </div>
@@ -206,31 +212,23 @@
         <!-- FAQ Section -->
         <section class="faq" id="faq">
             <div class="container">
-                <h2>Frequently Asked Questions</h2>
+                <h2 data-lang-en="Frequently Asked Questions" data-lang-he="שאלות נפוצות">Frequently Asked Questions</h2>
                 <div class="faq-list">
                     <div class="faq-item">
-                        <h3>Is this a medical device?</h3>
-                        <p>No, AsthmaSense is not a medical device and does not replace professional medical advice or treatment. It is an informational tool designed to help you track and understand patterns in your health data. Always consult your doctor for medical decisions.</p>
+                        <h3 data-lang-en="Do you support all smartwatches?" data-lang-he="האם אתם תומכים בכל סוגי השעונים החכמים?">Do you support all smartwatches?</h3>
+                        <p data-lang-en="Yes — asthmaGuard works with Apple Watch, Garmin, Fitbit, Samsung, WearOS devices, and even regular smartphones. Compatible with both iPhone and Android." data-lang-he="כן — האפליקציה תומכת ב-Apple Watch, Garmin, Fitbit, Samsung, שעוני WearOS ואפילו בסמארטפונים רגילים. עובד גם על iPhone וגם על Android.">Yes — asthmaGuard works with Apple Watch, Garmin, Fitbit, Samsung, WearOS devices, and even regular smartphones. Compatible with both iPhone and Android.</p>
                     </div>
                     <div class="faq-item">
-                        <h3>Do I need a specific type of smartwatch?</h3>
-                        <p>We're initially focusing on Apple Watch and Garmin devices, as they provide comprehensive health data. However, we're exploring compatibility with other smartwatch brands. If you have a different device, let us know in the beta signup form!</p>
+                        <h3 data-lang-en="Who can join the beta?" data-lang-he="מי יכול להצטרף לקבוצת הבטא?">Who can join the beta?</h3>
+                        <p data-lang-en="Anyone with asthma (or parents of children with asthma) who wants early access. No technical experience needed." data-lang-he="כל מי שסובל מאסתמה (או הורים לילדים עם אסתמה) ומעוניין בגישה מוקדמת. אין צורך בידע טכני.">Anyone with asthma (or parents of children with asthma) who wants early access. No technical experience needed.</p>
                     </div>
                     <div class="faq-item">
-                        <h3>Will my data be private?</h3>
-                        <p>Yes, privacy is a top priority. Your health data stays on your device and is only processed locally or with your explicit consent. We follow strict data protection practices and will never sell your personal information.</p>
+                        <h3 data-lang-en="How does it work?" data-lang-he="איך זה עובד?">How does it work?</h3>
+                        <p data-lang-en="asthmaGuard uses AI models and insights from the latest research in respiratory health to help detect early signs of elevated risk." data-lang-he="המערכת מבוססת על בינה מלאכותית ומשתמשת בממצאים מתוך מחקרים עדכניים בתחום הבריאות הנשימתית כדי לזהות סימנים מוקדמים לסיכון מוגבר.">asthmaGuard uses AI models and insights from the latest research in respiratory health to help detect early signs of elevated risk.</p>
                     </div>
                     <div class="faq-item">
-                        <h3>When will the app be available?</h3>
-                        <p>We're currently in early development and building our beta version. If you join the early access list, we'll notify you as soon as we're ready to onboard beta testers. We expect to begin beta testing in the coming months.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h3>Does this replace my inhaler or treatment?</h3>
-                        <p>Absolutely not. AsthmaSense is a monitoring and prediction tool, not a treatment. You should continue following your doctor's prescribed treatment plan, including using your inhaler and medications as directed.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h3>How accurate are the predictions?</h3>
-                        <p>Our AI model learns from your personal data over time, so accuracy improves as you use the app. Early predictions are based on general patterns, but the system becomes more personalized to you as it learns your specific triggers and patterns.</p>
+                        <h3 data-lang-en="Is this a medical device?" data-lang-he="האם זה תחליף לטיפול רפואי?">Is this a medical device?</h3>
+                        <p data-lang-en="No. It does not replace any treatment or doctor's advice." data-lang-he="לא. הכלי לא מחליף טיפול או הנחיות מרופא.">No. It does not replace any treatment or doctor's advice.</p>
                     </div>
                 </div>
             </div>
@@ -241,11 +239,11 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <p class="copyright">© 2025 AsthmaSense. All rights reserved.</p>
-                <p class="disclaimer">This is not a medical device and does not replace professional medical advice. Always consult your doctor.</p>
+                <p class="copyright" data-lang-en="© 2025 asthmaGuard. All rights reserved." data-lang-he="© 2025 asthmaGuard. כל הזכויות שמורות.">© 2025 asthmaGuard. All rights reserved.</p>
+                <p class="disclaimer" data-lang-en="This is not a medical device and does not replace professional medical advice. Always consult your doctor." data-lang-he="זה לא מכשיר רפואי ולא מחליף ייעוץ רפואי מקצועי. תמיד התייעץ עם הרופא שלך.">This is not a medical device and does not replace professional medical advice. Always consult your doctor.</p>
                 <div class="footer-links">
-                    <a href="mailto:contact@asthmasense.com">Contact</a>
-                    <a href="#privacy">Privacy</a>
+                    <a href="mailto:contact@asthmaguard.com" data-lang-en="Contact" data-lang-he="צור קשר">Contact</a>
+                    <a href="#privacy" data-lang-en="Privacy" data-lang-he="פרטיות">Privacy</a>
                 </div>
             </div>
         </div>
